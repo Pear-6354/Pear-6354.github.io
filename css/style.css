@@ -426,8 +426,15 @@ span.shortline5 {
 /*-- /About me--*/
 /*-- Portfolio --*/
 .myportfolio {
-	padding:0;
-	margin:0 auto;
+	padding:0;/*--margin是盒子的外边距，即盒子与盒子之间的距离，而padding是内边距，是盒子的边与盒子内部元素的距离。--*/
+	margin:60px auto 200px auto;
+}
+
+.myportfolio .specialDiv{
+	margin:auto 10% auto 10%;
+}
+.myportfolio .specialDiv p.myBegin{
+	color:green;
 }
 .myportfolio h3 {
 	color:#A1B3A4;
@@ -437,6 +444,8 @@ span.shortline5 {
 	font-weight:bold;
 	padding: 85px 0 20px;
 }
+
+
 .myportfolio p {
 	padding: 5px 0 15px;
 	font-size:17px;
@@ -518,6 +527,19 @@ input#email {
     border-right: none;
 	border-bottom:2px solid black;
 }
+
+input#comments {
+	outline:none;
+    margin: auto auto 4% auto;
+	padding:10px;
+	height:50px;
+	border-radius:0px;
+	border-left: none;
+    border-top: none;
+    border-right: none;
+	border-bottom:2px solid black;
+}
+
 textarea.form-control {
     height: 140px;
 	outline:none;
@@ -623,8 +645,8 @@ hr{
 	font-weight:400;
 	font-size:15px;
 }
-footer span.glyphicon.glyphicon-chevron-up {
-	margin: 0 0 0 50%;
+.glyphicon.glyphicon-chevron-up {
+
 	color:red;
 }
 /*-- /Footer --*/
@@ -690,10 +712,10 @@ footer span.glyphicon.glyphicon-chevron-up {
 @media (max-width: 1080px) {
 	.grid figure, .grid .placeholder {
     width: 295px;
-    height: 295px;
+    height: 600px;
 }
 	.grid figure {
-    margin: 10px;
+    margin: 100px;
 }
 	.banner-info h3 {
 	font-size:40px;
@@ -728,7 +750,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 @media (max-width: 991px) {
 	.grid figure, .grid .placeholder {
     width: 280px;
-    height: 280px;
+    height: 560px;
 }
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: -100px;
@@ -751,7 +773,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 @media (max-width: 900px) {
 	.grid figure, .grid .placeholder {
     width: 260px;
-    height: 260px;
+    height: 520px;
 }
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: -45px;
@@ -780,7 +802,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 	.grid figure, .grid .placeholder {
     width: 230px;
-    height: 230px;
+    height: 460px;
 }
 	.grid figure {
     margin: 5px;
@@ -903,6 +925,8 @@ footer span.glyphicon.glyphicon-chevron-up {
 }	
 }
 
+/*--@media 可以针对不同的屏幕尺寸设置不同的样式，特别是如果你需要设置设计响应式的页面，@media 是非常有用的。
+当你重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度重新渲染页面。 --*/
 @media (max-width: 600px){
 	.content-img {
     height: 350px;
@@ -964,9 +988,13 @@ footer span.glyphicon.glyphicon-chevron-up {
 	font-size:25px;
 	padding:40px 0 20px;
 }
-.myportfolio p {
+
+
+
+.myportfolio .content p {
 	font-size:15px;
 }
+
 .mygallery h3 {
     padding: 50px 0 40px;
 	font-size:25px;
@@ -1005,7 +1033,7 @@ footer span.glyphicon.glyphicon-chevron-up {
 	hr {
 	margin-top:0;
 }
-	input#name,input#email {
+	input#name,input#email,input#comments {
 	height:45px;
 } 
 }
